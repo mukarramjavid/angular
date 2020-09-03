@@ -1,0 +1,26 @@
+<div class="container">
+    <div class="row">
+        <h1 class="mt-2 text-center">About Me</h1>
+        Greetings, I am Mukarram Javid. I have done my BCS from UET LHR with 3.05 CGPA. Now, I am working at SixLogic as a Jr. DotNet Developer. Basically, I have 2 month experince of ReactJS. Now, I am learing Angular 8.
+    </div>
+    <br>
+
+    <div class="row">
+        <div>
+        <button class="btn btn-outline-info" (click)="handleClick()">Click:</button>&nbsp;&nbsp;<span class="text-primary font-weight-bolder">{{clickCounter}}</span> times!
+        <div class="mt-2" [ngStyle]="{'background-color': clickCounter > 4 ? 'yellow':'pink'}">
+            <ng-container *ngIf="clickCounter > 4; then True; else False"></ng-container>
+            <ng-template #True>
+                <p class="text-uppercase text-success font-weight-bolder">condition true</p>
+            </ng-template>
+            <ng-template #False>
+                <p class="text-uppercase text-danger font-weight-bolder">condition false</p>
+            </ng-template>
+        
+        </div>
+        
+        
+    </div>
+    </div>
+    
+</div>
